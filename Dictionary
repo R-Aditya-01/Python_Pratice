@@ -1,0 +1,22 @@
+st={'ace:1,'king':1,'winner':['lion','Eagle']}
+
+print(st)
+print(st['ace'])
+st[ace]=01
+print(st)
+st['cont']='5501-00'
+st.update({'ace':001,"king":"ace",'cont':'001-021'})
+
+#del st['age']----------------------removes age from st
+
+#age=student.pop('age')--------remove value with age
+
+print(len(st))
+print(st.keys())
+print(st.values()) #---------st.items()
+
+
+for key,value in st.items:
+    print(key,value)
+
+    
