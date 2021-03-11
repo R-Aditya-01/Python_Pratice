@@ -1,0 +1,18 @@
+class job():
+    def __init__(self,first,last,pay):
+        self.first= first
+        self.last= last
+        self.pay= pay
+        self.email=first+'.'+last+' @woxian.com'
+
+    def fullname(self):
+        return'{} {} {}'.format(self.first,self.last,self.email)
+
+
+emp_1=job('Jack','Sparrow',10000)
+emp_2=job('Leo','Wolf',20000)
+
+
+
+print(emp_1.fullname())
+print(job.fullname(emp_2))
