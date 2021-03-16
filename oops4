@@ -1,0 +1,38 @@
+class job():
+    num_of_emp=0
+    amount_to_be_raise=1.05 #variable
+    def __init__(self,first,last,pay):
+        self.first= first
+        self.last= last
+        self.pay= pay
+        self.email=first+'.'+last+' @woxian.com'
+        job.num_of_emp+=1
+
+    def fullname(self):
+        return'{} {} {}'.format(self.first,self.last,self.email)
+
+    def raise_amt(self):
+
+        self.pay=self.pay*self.amount_to_be_raise
+        
+
+
+class Dev(job):
+    amount_to_be_raise=1.11
+    
+    def __init__(self,first,last,pay,lang):
+        super().__init__(first,last,pay)
+        self.lang=lang
+        
+class Mang(job):
+    amount_to_be_raise=1.01
+    pass
+    
+#issubclass()
+#isinstance()
+emp4=Dev('ace','wolf','20000','java')
+print(emp4.first)
+print(emp4.last)
+print(emp4.pay)
+print(emp4.lang)  
+ 
