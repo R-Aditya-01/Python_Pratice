@@ -1,0 +1,43 @@
+#regluar-instance,classmethod-cls,staticmethod dont pass auto
+class job():
+    num_of_emp=0
+    amount_to_be_raise=1.05 #variable
+    def __init__(self,first,last,pay):
+        self.first= first
+        self.last= last
+        self.pay= pay
+        self.email=first+'.'+last+' @woxian.com'
+
+
+        job.num_of_emp+=1
+
+
+    def fullname(self):
+        return'{} {} {}'.format(self.first,self.last,self.email)
+
+    def raise_amt(self):
+
+        self.pay=self.pay*self.amount_to_be_raise
+        
+    @classmethod
+    def set_raise_amt(cls,amt):
+        cls.amount_to_be_raise=amt
+        
+    @classmethod
+    def split_string(cls,string):
+        first,last,pay=string.split('-')
+        return cls(first,last,pay)
+    
+    
+    @staticmethod
+    def iswork_day(day):
+        if day.weekday()==5 or day.weekday()==6:
+            return False
+        return True
+    
+emp_3='ace-wolf-20000'
+
+new_emp3=job.split_string(emp_3)
+print(new_emp3.first)
+print(new_emp3.last)
+print(new_emp3.pay)
